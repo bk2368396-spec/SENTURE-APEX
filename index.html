@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SENTEUR APEX luxury fragrances for Pakistan">
+  <title>SENTEUR APEX | Luxury Perfumes in PKR</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="navbar-logo">SENTEUR APEX</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">☰</button>
+      <div class="navbar-links" id="navbarLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#collection">Fragrances</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-copy">
+          <p class="subtitle">The Art of Fragrance</p>
+          <h1><span class="gold-text">Scent</span> is your <span class="gold-text">signature</span></h1>
+          <p class="hero-description">Discover premium SENTEUR APEX perfumes with Cash on Delivery across Pakistan.</p>
+          <div class="hero-buttons">
+            <a href="#collection" class="btn-gold">Shop Now</a>
+            <a href="about.html" class="btn-outline">About Us</a>
+          </div>
+        </div>
+        <div class="hero-images">
+          <img src="images/bottle-male.png" alt="Perfume bottle" class="hero-image hero-image-left">
+          <img src="images/bottle-female.png" alt="Perfume bottle" class="hero-image hero-image-right">
+        </div>
+      </div>
+    </section>
+
+    <section class="collection" id="collection">
+      <div class="container">
+        <div class="section-header">
+          <p class="label">Featured Fragrances</p>
+          <h2>Signature Collection</h2>
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-tab active" onclick="filterProducts('all', this)">All Fragrances</button>
+          <button class="filter-tab" onclick="filterProducts('male', this)">Pour Homme</button>
+          <button class="filter-tab" onclick="filterProducts('female', this)">Pour Femme</button>
+          <button class="filter-tab" onclick="filterProducts('unisex', this)">Unisex</button>
+          <button class="filter-tab" onclick="filterProducts('kids', this)">For Kids</button>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="top-sellers" id="top-sellers">
+      <div class="container">
+        <div class="section-header">
+          <p class="label">Best Sellers</p>
+          <h2>Trending Fragrances</h2>
+          <p class="hero-description">Our most popular SENTEUR APEX scents, loved for luxury performance and elegant packaging.</p>
+        </div>
+        <div class="top-gallery">
+          <article class="top-card">
+            <span class="top-badge">TRENDING</span>
+            <h3>Midnight Oud</h3>
+            <p>Dark amber and smoky oud for evening confidence.</p>
+          </article>
+          <article class="top-card">
+            <span class="top-badge">TRENDING</span>
+            <h3>Jasmine Blush</h3>
+            <p>Soft floral warmth with vanilla and musk.</p>
+          </article>
+          <article class="top-card">
+            <span class="top-badge">TRENDING</span>
+            <h3>Amber Gold</h3>
+            <p>Rich amber and golden heat for modern luxury.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-preview">
+      <div class="container about-preview-grid">
+        <div>
+          <p class="label">SENTEUR APEX</p>
+          <h2>Luxury perfume experiences with PKR pricing and COD.</h2>
+          <p class="hero-description">From Karachi to Islamabad, SENTEUR APEX delivers premium scents in a sleek black and gold presentation, crafted for those who demand elegance.</p>
+          <a href="about.html" class="btn-outline">Learn More</a>
+        </div>
+        <div class="preview-cards">
+          <article class="preview-card">
+            <h3>Premium Scents</h3>
+            <p>Fine fragrance compositions for all preferences.</p>
+          </article>
+          <article class="preview-card">
+            <h3>Cash on Delivery</h3>
+            <p>Simple checkout with COD across Pakistan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="collections-grid" id="collections">
+      <div class="container">
+        <div class="section-header">
+          <p class="label">Shop By</p>
+          <h2>Our Collections</h2>
+        </div>
+        <div class="shop-grid">
+          <a href="#collection" class="shop-card">
+            <h3>FOR HER</h3>
+            <p>Soft, sumptuous florals and glowing sweetness.</p>
+          </a>
+          <a href="#collection" class="shop-card">
+            <h3>FOR HIM</h3>
+            <p>Strong, smoky and confident scents for men.</p>
+          </a>
+          <a href="#collection" class="shop-card">
+            <h3>FOR KIDS</h3>
+            <p>Playful and fun fragrances for children.</p>
+          </a>
+          <a href="#collection" class="shop-card">
+            <h3>UNITY</h3>
+            <p>Unisex scents for every mood.</p>
+          </a>
+          <a href="gallery.html" class="shop-card">
+            <h3>GALLERY</h3>
+            <p>Luxury product design and lifestyle imagery.</p>
+          </a>
+          <a href="checkout.html" class="shop-card">
+            <h3>CHECKOUT</h3>
+            <p>Cash on Delivery orders made easy.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="about">
+      <div class="container footer-container">
+        <div class="footer-brand">
+          <div class="footer-logo">SENTEUR APEX</div>
+          <p>Born from a passion for olfactory artistry, SENTEUR APEX crafts fragrances that transcend the ordinary.</p>
+        </div>
+        <div>
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>contact@senteurapex.com</li>
+            <li>+92 300 0000000</li>
+            <li>Karachi · Lahore · Islamabad</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 SENTEUR APEX. All rights reserved.</div>
+    </footer>
+  </main>
+
+  <button class="customer-care-float" onclick="openCustomerCareModal()">
+    <span>📧 Customer Care</span>
+  </button>
+
+  <div class="modal-overlay" id="customerCareOverlay" onclick="closeCustomerCareModal()"></div>
+  <div class="modal-content" id="customerCareModal">
+    <div class="modal-header">
+      <h2>Customer Care</h2>
+      <button class="modal-close" onclick="closeCustomerCareModal()">✕</button>
+    </div>
+    <form id="supportForm" onsubmit="submitSupportTicket(event)">
+      <div class="form-group">
+        <label for="supportSubject">Subject</label>
+        <input type="text" id="supportSubject" name="subject" placeholder="e.g., Product inquiry, delivery question" required>
+      </div>
+      <div class="form-group">
+        <label for="supportMessage">Message</label>
+        <textarea id="supportMessage" name="message" rows="5" placeholder="Describe your concern in detail..." required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="supportOrderId">Order ID (Optional)</label>
+        <input type="text" id="supportOrderId" name="orderId" placeholder="e.g., SA-12345">
+      </div>
+      <div class="form-group">
+        <label for="supportEmail">Email</label>
+        <input type="email" id="supportEmail" name="email" placeholder="your@email.com" required>
+      </div>
+      <button type="submit" class="btn-gold">Send Message</button>
+      <div id="supportFormError" class="form-error"></div>
+    </form>
+  </div>
+
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h2>Your Cart <span id="cartCount"></span></h2>
+      <button class="cart-close" onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <p>🛍</p>
+        <p>Your cart is empty</p>
+        <a href="index.html">Continue Shopping</a>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">Rs. 0</span>
+      </div>
+      <a href="checkout.html" class="btn-gold">Checkout</a>
+      <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/perfumes.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/support.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SENTEUR APEX customer signup">
+  <title>SENTEUR APEX | Sign Up</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="navbar-logo">SENTEUR APEX</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">☰</button>
+      <div class="navbar-links" id="navbarLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="login.html">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <h1>Create Account</h1>
+      <p>Register with your email to leave reviews and shop with COD.</p>
+      <form id="signupForm" class="auth-form" onsubmit="handleUserSignup(event)">
+        <label for="displayName">Full Name</label>
+        <input type="text" id="displayName" placeholder="Your full name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@example.com" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Create a strong password" required>
+        <button class="btn-gold" type="submit">Sign Up</button>
+        <p class="auth-footer">Already have an account? <a href="login.html">Login</a></p>
+        <div class="form-error" id="authError"></div>
+      </form>
+    </div>
+  </main>
+
+  <a href="https://wa.me/923000000000?text=Hello%20SENTEUR%20APEX%20Admin" class="whatsapp-float" target="_blank" rel="noopener">
+    <span>Chat Admin</span>
+  </a>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

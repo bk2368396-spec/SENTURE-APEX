@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SENTEUR APEX checkout page with Cash on Delivery">
+  <title>SENTEUR APEX | Checkout</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="navbar-logo">SENTEUR APEX</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">☰</button>
+      <div class="navbar-links" id="navbarLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="checkout" id="checkoutApp">
+    <div class="container">
+      <div class="checkout-header">
+        <a href="index.html">← Back</a>
+        <h1>Cash on Delivery Checkout</h1>
+      </div>
+      <div class="checkout-grid">
+        <div>
+          <form id="checkoutForm" class="checkout-form" onsubmit="submitOrder(event)">
+            <h2>Delivery Information</h2>
+            <p class="hero-description">Fill in your details below. All orders are shipped with Cash on Delivery in Pakistan.</p>
+            <div class="form-grid">
+              <div class="full"><label for="fullName">Full Name *</label><input type="text" id="fullName" required></div>
+              <div class="full"><label for="email">Email *</label><input type="email" id="email" required></div>
+              <div class="full"><label for="phone">Phone Number *</label><input type="tel" id="phone" placeholder="03XX-XXXXXXX" required></div>
+              <div class="full"><label for="address">Full Address *</label><input type="text" id="address" required></div>
+              <div class="full"><label for="city">City *</label><select id="city" required>
+                  <option value="">Select city</option>
+                  <option>Karachi</option>
+                  <option>Lahore</option>
+                  <option>Islamabad</option>
+                  <option>Faisalabad</option>
+                  <option>Rawalpindi</option>
+                  <option>Multan</option>
+                  <option>Peshawar</option>
+                  <option>Quetta</option>
+                  <option>Sialkot</option>
+                  <option>Gujranwala</option>
+                </select></div>
+              <div class="full"><label for="postalCode">Postal Code</label><input type="text" id="postalCode" placeholder="Postal code"></div>
+              <div class="full"><button type="submit" class="btn-gold full-width">Place Order with COD</button></div>
+            </div>
+            <p class="cod-note">Orders will be delivered with Cash on Delivery across major Pakistani cities within 3-5 business days.</p>
+          </form>
+        </div>
+
+        <div>
+          <div class="order-summary" id="orderSummary"></div>
+        </div>
+      </div>
+
+      <div class="confirmation" id="confirmationScreen" style="display:none">
+        <div class="check">✓</div>
+        <h1>Order Confirmed!</h1>
+        <p class="msg">Your COD order has been placed successfully. Our courier team will contact you shortly.</p>
+        <p class="order-id" id="orderId"></p>
+        <a href="index.html" class="btn-gold">Continue Shopping</a>
+      </div>
+    </div>
+  </main>
+
+  <a href="https://wa.me/923000000000?text=Hello%20SENTEUR%20APEX%20Admin" class="whatsapp-float" target="_blank" rel="noopener">
+    <span>Chat Admin</span>
+  </a>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <div class="footer-logo">SENTEUR APEX</div>
+        <p>Premium fragrances designed for unforgettable moments.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>contact@senteurapex.com</li>
+          <li>+92 300 0000000</li>
+          <li>Karachi · Lahore · Islamabad</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 SENTEUR APEX. All rights reserved.</div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/perfumes.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

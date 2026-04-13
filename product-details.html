@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium SENTEUR APEX perfume details, review and Cash on Delivery checkout.">
+  <title>Product Details | SENTEUR APEX</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="navbar-logo">SENTEUR APEX</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">?</button>
+      <div class="navbar-links" id="navbarLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="product-detail">
+      <div class="container product-detail-grid">
+        <div class="product-detail-image-wrapper">
+          <img src="images/placeholder.png" alt="Perfume image" id="productImage" class="product-detail-image">
+        </div>
+        <div class="product-detail-copy">
+          <p class="label">Product Details</p>
+          <h1 id="productName">Loading perfume...</h1>
+          <p class="product-subtitle" id="productTagline">Elegance, richness, and a signature scent.</p>
+          <div class="product-meta">
+            <span id="productCategory" class="product-badge">Category</span>
+            <span id="productPrice" class="product-price">Rs. 0</span>
+          </div>
+          <p id="productDescription" class="product-description">Detailed description loading from our premium database.</p>
+          <button class="btn-gold" id="buyNowButton">Add to Cart</button>
+          <p class="product-note">Cash on Delivery available across Pakistan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="label">Reviews</p>
+          <h2>Customer Feedback</h2>
+        </div>
+        <div class="review-list" id="reviewList">
+          <p class="loading-text">Loading reviews?</p>
+        </div>
+        <form class="review-form" id="reviewForm">
+          <h3>Leave a Review</h3>
+          <input type="text" id="reviewerName" placeholder="Your name" required>
+          <textarea id="reviewText" rows="5" placeholder="Write your review here..." required></textarea>
+          <button class="btn-gold" type="submit">Submit Review</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Support | Admin Panel | SENTEUR APEX</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+  <aside class="admin-sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-mark">SA</span>
+      <div>
+        <h2>SENTEUR APEX</h2>
+        <p>Admin Panel</p>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="admin.html" class="sidebar-link">Dashboard</a>
+      <a href="admin.html" class="sidebar-link">Products</a>
+      <a href="admin.html" class="sidebar-link">Orders</a>
+      <a href="admin.html" class="sidebar-link">Reviews</a>
+      <a href="admin-support.html" class="sidebar-link active">Customer Care</a>
+    </nav>
+    <button class="sidebar-logout" onclick="handleLogout()">Logout</button>
+  </aside>
+
+  <main class="admin-main">
+    <header class="admin-header">
+      <div>
+        <h1 id="pageTitle">Customer Support</h1>
+        <p class="admin-subtitle">Manage customer inquiries and support tickets in real time.</p>
+      </div>
+      <div class="admin-header-actions">
+        <span id="adminEmail"></span>
+        <button onclick="handleLogout()" class="btn-secondary">Logout</button>
+      </div>
+    </header>
+
+    <section class="admin-section">
+      <div class="support-filters">
+        <button class="filter-btn active" onclick="filterTickets('all', this)">All Tickets</button>
+        <button class="filter-btn" onclick="filterTickets('Open', this)">Open</button>
+        <button class="filter-btn" onclick="filterTickets('Resolved', this)">Resolved</button>
+      </div>
+
+      <table class="support-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Customer Email</th>
+            <th>Subject</th>
+            <th>Order ID</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="ticketsTableBody">
+          <tr>
+            <td colspan="6" class="empty-state">Loading support tickets...</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="ticketOverlay" onclick="closeTicketModal()"></div>
+  <div class="modal-content" id="ticketModal">
+    <div class="modal-header">
+      <h2>Ticket Details</h2>
+      <button class="modal-close" onclick="closeTicketModal()">✕</button>
+    </div>
+    <div class="ticket-details">
+      <div class="detail-row">
+        <label>Customer Email:</label>
+        <p id="detailEmail"></p>
+      </div>
+      <div class="detail-row">
+        <label>Subject:</label>
+        <p id="detailSubject"></p>
+      </div>
+      <div class="detail-row">
+        <label>Message:</label>
+        <p id="detailMessage"></p>
+      </div>
+      <div class="detail-row">
+        <label>Order ID:</label>
+        <p id="detailOrderId"></p>
+      </div>
+      <div class="detail-row">
+        <label>Date:</label>
+        <p id="detailDate"></p>
+      </div>
+      <div class="detail-row">
+        <label>Status:</label>
+        <p id="detailStatus"></p>
+      </div>
+      <button class="btn-gold" id="resolveBtn" onclick="markAsResolved()">Mark as Resolved</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/admin-support.js"></script>
+</body>
+</html>
